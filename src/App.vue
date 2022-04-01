@@ -1,32 +1,27 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar dark color="grey darken-4" elevation="4">
+      <!-- <v-icon>{{ icons.mdiGithub }}</v-icon> -->
+      <!-- refer to vuetify spacing -->
+      <div class="mx-2"></div>
+      <v-toolbar-title> GoT knjige</v-toolbar-title>
+    </v-app-bar>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<script>
+// import { mdiGithub } from "@mdi/js";
+export default {
+  name: "App",
+  data() {
+    return {
+      icons: {
+        // mdiGithub,
+      },
+    };
+  },
+};
+</script>
